@@ -3,10 +3,12 @@ resource "aws_instance" "server2" {
   instance_type = var.instance_type
   subnet_id     = var.subnet_2_id
 
-  tags = {
-    Name        = "Server2"
-    Environment = "Development"
-    Project     = "MyProject"
+ tags = {
+    Name = "vrpcradprd1"
+    Owner = "drussell@newscorp.com"
+    Environment ="prod"
+    Application = "Radius"
+    App_ID = "radius_network"
   }
 
   metadata_options {
